@@ -1,26 +1,12 @@
-import React, { Component } from 'react';
-import PokemonList from './components/PokemonList';
+import React, { useState } from 'react';
+import PokemonList from './components/PokemonList.js'
 
-class App extends Component {
-  state = {
-    pokemon: [
-      {
-        title: "bulbasaur", 
-      },
-      {
-        title:
-        "charmander"
-      }
-    ]
-  }
-
-  render() {
-    return (
-      <div>
-        <PokemonList pokemon={this.state.pokemon} />
-      </div>
-    );
-  }
+function App()  {
+  const [pokemon, setPokemon] = useState(["bulbasaur, charmander"])
+  
+  return (
+    <PokemonList pokemon={pokemon}/>
+  );
 }
 
 export default App;

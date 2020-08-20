@@ -1,11 +1,15 @@
-import React, { Component } from 'react';
+import React from 'react'
 
-class PokemonList extends Component {
-  render() {
-    return this.props.pokemon.map((pokemon) => (
-      <h3>{ pokemon.title }</h3>
-    ));
-  }
+export default function PokemonList({ pokemon }) {
+  return (
+    <div>
+      {pokemon.map(p => (
+        <div key = {p}>
+          {p}
+        </div>
+      ))}
+    </div>
+  )
 };
 
-export default PokemonList;
+
